@@ -1,0 +1,76 @@
+day 1 belajar mysql
+
+Mater Dasar
+
+mysql merupakan sistem manajement basis data
+yang diperlukan adalah mysql server saja sebenarnya
+
+untuk menggunakan mysql server bisa menggunakan:
+     terminal/dmc dengan log in melalui perintah(query) "mysql -uroot -p" kemudian diperintahkan masukkan password
+     mysql shell belum pernah nyoba tapi kemungkinan sama
+     mysql workbench cukup masukkan password ketika memilih database
+     IDE untuk membaca mysql seperti DBeaver(kelebihan nya bisa untuk selain mysql juga)
+
+tipe data 
+    bilangan bulat
+        BIT 
+            mulai dari 1 sampai 64
+        TINYINT
+            mulai dari -128 sampai 127 (untuk sign) dan 0 sampai 255 (untuk unsign)
+        SMALLINT
+            mulai dari -8388608 sampai 8388607 (untuk sign) dan 0 sampai 16777215 (untuk unsign)
+        INT (lebih umum digunakan)
+            mulai dari -2147483648 sampai 2147483647 (untuk sign) dan 0 sampai 4294967295 (untuk unsign)
+        BIGINT
+            mulai dari -9223372036854775808  sampai 9223372036854775807 (untuk sign) dan 0 sampai 18446744073709551615 (untuk unsign)
+    
+    bilangan pecahan
+        FLOAT (lebih umum digunakan)
+            mulai dari -1.7976931348623157E+308 sampai 2.2250738585072014E-30 dan 1.175494351E-38 sampai 3.402823466E+38
+        DOUBLE
+            mulai dari -1.7976931348623157E+308 sampai -2.2250738585072014E-308 dan 2.2250738585072014E-308 sampai 1.7976931348623157E+308
+        DECIMAL / DEC 
+            digunakan untuk yang lebih pasti dengan format DEC/DECIMAL(jumlah digit,berapa digit dibelakang koma)
+    
+    karakter
+        CHAR
+            karakter dengan panjang pasti dengan format CHAR(panjang karakter)
+        VARCHAR
+            karakter dengan panjang pasti dengan format VARCHAR(panjang karakter),
+            berbeda dengan CHAR dibagian ukuran memori yang digunakan
+            VARCHAR lebih kecil jika panjang karakter yang di imput lebih kecil daripada yang deklarasikan,
+            namun VARCHAR akan lebih berat jika panjangkarakter yang di imput sama dengan yang deklarasikan
+        BINARY
+            maka yang disimpan adalah angka biner sesuai dengan urutan ASCII
+            dengan format BINARY('karakter')
+        VARBINARY
+            maka yang disimpan adalah angka biner sesuai dengan urutan ASCII
+            dengan format BINARY('karakter')
+            perbedaan nya sama seperti VARCHAR dengan CHAR
+        TEXT
+            Teks panjang (hingga 65.535 karakter)
+        TINYTEXT
+            Teks pendek (hingga 255 karakter)
+        BLOB
+            Data biner (misalnya gambar, file)
+        ENUM
+            digunakan jika hanya menerima 1 input karakter pasti, dengan format ENUM('karakter','karakter',....)
+        SET
+            digunakan jika hanya menerima input karakter pasti, dengan format SET('karakter','karakter',....)
+            berbeda dengan ENUM set lebih kompleks,bisa menerima lebih dari 1,
+            namun tidak akan mengulang data jika ada 2 imputan sama hingga 64 data yang berbeda
+    date and time
+        DATE
+            menyimpan data tahun-bulan-tanggal, dengan format DATE YYYY-MM-DD
+        TIME
+            menyimpan data jam:menit:detik, dengan format TIME HH:MM:SS
+        DATETIME
+            gabungan DATE dan TIME
+        TIMESTAMP
+            sama dengan DATETIME namun digunakan untuk daftar (log) kegiatan
+        YEAR
+            menyimpan data tahun saja dengan format YEAR YYYY
+
+engine mysql 
+ada banyak namun yang sering dipake innodb
+untuk melihat daftar engine bisa menggunakan command show engines;
