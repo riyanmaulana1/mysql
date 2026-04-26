@@ -1,0 +1,23 @@
+day 2 belajar database mysql
+
+melihat daftar database 
+    menggunakan command "show databases;"
+
+memilih database 
+    menggunakan command "use (nama database);"
+
+membuat table didalam database
+    menggunakan command 
+    "create table nama_table
+    (nama_column jenis column)engine = nama engine;"
+
+melihat table 
+    melihat semua daftar table yang dimiliki database tersebut
+    menggunakan command "show tables;"
+
+melihat struktur table 
+    melihat struktur table bisa menggunakan 2 cara yang menghasilkan output berbeda
+    command
+            "show create table nama_table;", maka menghasilkan syntax dari table tersebut
+            "describe/desc nama_table;" maka menghasilkan output gambar table seperti apa
+
